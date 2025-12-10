@@ -1,0 +1,166 @@
+{% extends "layout.html" %}
+{% load static %}
+{% block content %}
+        <!-- Experience Hero Banner -->
+        <section id="top" class="py-5 py-md-5 py-lg-6 text-center bg-white border-bottom border-light-subtle">
+            <div class="container-xl px-4">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+                        <span class="badge text-fme-red bg-light border border-fme-red mb-3 fw-bold py-2 px-3 rounded-pill text-uppercase">Our History & Portfolio</span>
+                        <h1 class="display-4 fw-extrabold text-fme-dark">
+                            A Proven Track Record of Clinical Excellence
+                        </h1>
+                        <p class="mt-4 lead text-muted mx-auto" style="max-width: 700px;">
+                            Since 2018, FME has delivered guaranteed reliability across critical care, surgical, and diagnostic departments for leading institutions across Malawi and the region.
+                        </p>
+                        <div class="mt-5 d-flex justify-content-center gap-3 flex-wrap">
+                            <a href="#projects" class="btn btn-fme-blue btn-lg rounded-pill shadow-sm">
+                                View Key Projects
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. METRICS AND STATS (Track Record) -->
+        <section id="track-record" class="py-5 bg-light border-bottom">
+            <div class="container-xl px-4">
+                <div class="row text-center g-4">
+                    <div class="col-md-4">
+                        <div class="card p-4 h-100 shadow-sm">
+                            <i class="bi bi-calendar-check display-5 text-fme-blue mb-3"></i>
+                            <h3 class="display-6 fw-bold text-fme-dark">7+</h3>
+                            <p class="lead text-muted mb-0">Years of Operation</p>
+                            <span class="small text-muted">(Founded January 2018)</span>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card p-4 h-100 shadow-sm">
+                            <i class="bi bi-people-fill display-5 text-fme-red mb-3"></i>
+                            <h3 class="display-6 fw-bold text-fme-dark">5+</h3>
+                            <p class="lead text-muted mb-0">Qualified BME Engineers</p>
+                            <span class="small text-muted">(Expertise across all specialties)</span>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card p-4 h-100 shadow-sm">
+                            <i class="bi bi-globe display-5 text-fme-blue mb-3"></i>
+                            <h3 class="display-6 fw-bold text-fme-dark">3+</h3>
+                            <p class="lead text-muted mb-0">Regional Countries Served</p>
+                            <span class="small text-muted">(Malawi and neighboring Countries)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. CORE TECHNICAL DOMAINS -->
+        <section id="projects" class="py-5 py-lg-6 bg-white border-bottom">
+            <div class="container-xl px-4">
+                <div class="text-center mb-5">
+                    <span class="text-fme-red fw-bold text-uppercase small">Technical Focus</span>
+                    <h2 class="display-6 fw-bold text-fme-dark mt-2">Specialized Expertise Across All Hospital Departments</h2>
+                </div>
+
+                <div class="row g-4">
+                    <!-- Domain 1: Critical Care (ICU) -->
+                    <div class="col-md-6 col-lg-2">
+                        <div class="card p-3 h-100 text-center border-top border-5 border-fme-blue shadow-sm">
+                            <i class="bi bi-heart-pulse-fill display-5 text-fme-blue mb-3"></i>
+                            <h5 class="fw-bold text-fme-dark">ICU & Life Support</h5>
+                            <p class="card-text small text-muted">Ventilators, Defibrillators, Patient Monitoring Systems, Infusion Pumps, and Anesthesia machines.</p>
+                        </div>
+                    </div>
+                    <!-- Domain 2: Operating Theatre -->
+                    <div class="col-md-6 col-lg-2">
+                        <div class="card p-3 h-100 text-center border-top border-5 border-fme-red shadow-sm">
+                            <i class="bi bi-bandaid-fill display-5 text-fme-red mb-3"></i>
+                            <h5 class="fw-bold text-fme-dark">Surgical & Theatre</h5>
+                            <p class="card-text small text-muted">Electrosurgical units (ESU), Operating Tables/Lights, Sterilization equipment, and imaging systems used in surgery.</p>
+                        </div>
+                    </div>
+                    <!-- Domain 3: Laboratory & Diagnostics -->
+                    <div class="col-md-6 col-lg-2">
+                        <div class="card p-3 h-100 text-center border-top border-5 border-fme-blue shadow-sm">
+                            <i class="fa-solid fa-microscope display-5 text-fme-blue mb-3"></i>
+                            <h5 class="fw-bold text-fme-dark">Laboratory Systems</h5>
+                            <p class="card-text small text-muted">Clinical Analyzers, Hematology, Biochemistry, and all related calibration and quality assurance procedures.</p>
+                        </div>
+                    </div>
+                    <!-- Domain 4: Radiology & Imaging -->
+                    <div class="col-md-6 col-lg-2">
+                        <div class="card p-3 h-100 text-center border-top border-5 border-fme-red shadow-sm">
+                            <i class="fa-solid fa-x-ray display-5 text-fme-red mb-3"></i>
+                            <h5 class="fw-bold text-fme-dark">Imaging Technology</h5>
+                            <p class="card-text small text-muted">X-Ray, Ultrasound,CT-scanner, C-Arm maintenance, and diagnostic imaging equipment support.</p>
+                        </div>
+                    </div>
+
+
+                    <!-- Domain 5: Physiotherapy & Rehabilitation (NEW) -->
+                    <div class="col-md-6 col-lg-2">
+                        <div class="card p-3 h-100 text-center border-top border-5 border-fme-blue shadow-sm rounded-4">
+                            <i class="fa-solid fa-dumbbell display-5 text-fme-blue mb-3"></i>
+                            <h5 class="fw-bold text-fme-dark">Physiotherapy & Rehab</h5>
+                            <p class="card-text small text-muted">Electrotherapy units, Continuous Passive Motion (CPM) machines, hydrotherapy equipment, and full gymnasium setup.</p>
+                        </div>
+                    </div>
+
+                    <!-- Domain 6: Hospital Laundry Systems (NEW) -->
+                    <div class="col-md-6 col-lg-2">
+                        <div class="card p-3 h-100 text-center border-top border-5 border-fme-red shadow-sm rounded-4">
+                            <i class="fa-solid fa-soap display-5 text-fme-red mb-3"></i>
+                            <h5 class="fw-bold text-fme-dark">Hospital Laundry Systems</h5>
+                            <p class="card-text small text-muted">Industrial washers, high-volume dryers, steam pressers, and infection control maintenance for sterilization processes.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. CLIENT PORTFOLIO (Mock Logos) -->
+        <section id="clients" class="py-5 py-lg-6 bg-light">
+            <div class="container-xl px-4">
+                <div class="text-center mb-5">
+                    <h2 class="display-6 fw-bold text-fme-dark mt-2">Trusted By Leading Healthcare Providers</h2>
+                    <p class="lead text-muted mx-auto" style="max-width: 700px;">
+                        Our clients include Government Hospitals, Private Institutions,Speciality Clinics and global Medical Equipment Suppliers.
+                    </p>
+                </div>
+                {% comment %}
+
+                <div class="row g-5 align-items-center justify-content-center">
+                    <!-- Mock Logos representing different sectors (Government, Private, Supplier, Lab) -->
+                    <div class="col-6 col-md-4 col-lg-2 text-center">
+                        <img src="https://placehold.co/200x80/f7f9fc/8a8a8a?text=National+Health" class="img-fluid client-logo" alt="National Health Authority Logo">
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2 text-center">
+                        <img src="https://placehold.co/200x80/f7f9fc/8a8a8a?text=Premier+Clinics" class="img-fluid client-logo" alt="Premier Clinics Logo">
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2 text-center">
+                        <img src="https://placehold.co/200x80/f7f9fc/8a8a8a?text=Global+Devices+Inc." class="img-fluid client-logo" alt="Global Devices Inc. Logo">
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2 text-center">
+                        <img src="https://placehold.co/200x80/f7f9fc/8a8a8a?text=Regional+Lab+Services" class="img-fluid client-logo" alt="Regional Lab Services Logo">
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2 text-center">
+                        <img src="https://placehold.co/200x80/f7f9fc/8a8a8a?text=TechMed+Africa" class="img-fluid client-logo" alt="TechMed Africa Logo">
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2 text-center">
+                        <img src="https://placehold.co/200x80/f7f9fc/8a8a8a?text=City+Hospital+Trust" class="img-fluid client-logo" alt="City Hospital Trust Logo">
+                    </div>
+                </div>
+
+                <div class="text-center mt-5">
+                    <a href="#contact" class="btn btn-outline-danger rounded-pill px-4">
+                        See Client References
+                        <i class="bi bi-arrow-right ms-2"></i>
+                    </a>
+                </div>
+                {% endcomment %}
+            </div>
+        </section>
+{% endblock %}

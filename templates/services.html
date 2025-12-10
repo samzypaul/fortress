@@ -1,0 +1,196 @@
+
+{% extends "layout.html" %}
+{% load static %}
+{% block title %} services {% endblock %}
+{%  block content %}
+ <!-- Services Hero Banner -->
+        <section id="top" class="py-5 py-md-5 py-lg-6 text-center bg-white border-bottom border-light-subtle">
+            <div class="container-xl px-4">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+                        <span class="badge text-fme-red bg-light border border-fme-red mb-3 fw-bold py-2 px-3 rounded-pill text-uppercase">Core Competencies</span>
+                        <h1 class="display-4 fw-extrabold text-fme-dark">
+                            End-to-End Medical Technology Lifecycle Support
+                        </h1>
+                        <p class="mt-4 lead text-muted mx-auto" style="max-width: 700px;">
+                            From preventative maintenance schedules to critical installations and strategic consulting,medical supply and research design, we are your trusted biomedical partner.
+                        </p>
+                        <div class="mt-5 d-flex justify-content-center gap-3 flex-wrap">
+                            <a href="{% url 'website:quotation'%}" class="btn btn-fme-blue btn-lg rounded-pill shadow-sm">
+                                Request a Service Quote
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. DETAILED SERVICE SECTION 1: Maintenance & Calibration -->
+        <section id="maintenance" class="py-5 py-lg-6 bg-light border-bottom">
+            <div class="container-xl px-4">
+                <div class="row align-items-center g-5">
+                    <!-- Text Content -->
+                    <div class="col-lg-6 order-lg-1">
+                        <h2 class="display-6 fw-bold text-fme-dark mb-4">
+                            Scheduled Maintenance & Precision Calibration
+                        </h2>
+                        <p class="lead text-muted">
+                            Operational continuity is non-negotiable in healthcare. Our comprehensive maintenance contracts (AMCs) ensure your critical equipment meets all safety and performance standards, minimizing unscheduled downtime.
+                        </p>
+                        <ul class="list-unstyled fw-semibold text-fme-dark">
+                            <li class="mb-2"><i class="bi bi-clock-history me-3 text-fme-red"></i>Preventative Maintenance: Regular, systematic checks to prevent failure.</li>
+                            <li class="mb-2"><i class="bi bi-thermometer-half me-3 text-fme-red"></i>Precision Calibration: Adjusting instruments to conform to required accuracy specifications.</li>
+                            <li class="mb-2"><i class="fa-solid fa-bolt me-3 text-fme-red"></i>Electrical Safety Testing: Critical testing to safeguard patients and staff.</li>
+                            <li class="mb-2"><i class="bi bi-tools me-3 text-fme-red"></i>Corrective Repairs: Fast, reliable repairs with guaranteed certified spare parts.</li>
+                        </ul>
+                        <a href="{% url 'website:quotation' %}" class="btn btn-outline-danger rounded-pill mt-3">
+                            Book a Maintenance Audit
+                            <i class="bi bi-arrow-right ms-2"></i>
+                        </a>
+                    </div>
+
+                    <!-- Image Placeholder -->
+                    <div class="col-lg-6 order-lg-2">
+                        <img style="width: 620px;height: 420px" src="{% static 'assets/img/preventive2.png' %}{% comment %}https://placehold.co/1200x800/0077C2/ffffff?text=Preventative+Maintenance+Check{% endcomment %}"
+                             class="img-fluid img-rounded-3 shadow-lg"
+                             alt="Technician performing preventative maintenance on a monitor"
+                             onerror="this.onerror=null;this.src='https://placehold.co/1200x800/0077C2/ffffff?text=Preventative+Maintenance+Check';"
+                        >
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. DETAILED SERVICE SECTION 2: Supply & Installation -->
+        <section id="supply-installation" class="py-5 py-lg-6 bg-white border-bottom">
+            <div class="container-xl px-4">
+                <div class="row align-items-center g-5">
+                    <!-- Image Placeholder -->
+                    <div class="col-lg-6 order-lg-2">
+                        <img style="height: 420px;width: 620px" src="{% static 'assets/img/installation_commisioning.png' %}{% comment %}https://placehold.co/1200x800/1e293b/ffffff?text=Installation+and+Commissioning{% endcomment %}"
+                             class="img-fluid img-rounded-3 shadow-lg"
+                             alt="New medical equipment being installed in a hospital room"
+                             onerror="this.onerror=null;this.src='https://placehold.co/1200x800/1e293b/ffffff?text=Installation+and+Commissioning';"
+                        >
+                    </div>
+
+                    <!-- Text Content -->
+                    <div class="col-lg-6 order-lg-1">
+                        <h2 class="display-6 fw-bold text-fme-dark mb-4">
+                            Equipment Supply and Turnkey Installation
+                        </h2>
+                        <p class="lead text-muted">
+                            We bridge the gap between procurement and readiness. Our team manages the logistical challenges of equipment supply and ensures flawless, safe installation and commissioning.
+                        </p>
+                        <div class="row g-3 mt-4">
+                            <div class="col-sm-6">
+                                <h6 class="fw-bold text-fme-blue"><i class="bi bi-truck me-2"></i>Reliable Supply Chain</h6>
+                                <p class="small text-muted">Sourcing and providing a wide range of certified medical devices, instruments, and high-quality spare parts.</p>
+                            </div>
+                            <div class="col-sm-6">
+                                <h6 class="fw-bold text-fme-blue"><i class="bi bi-house-gear-fill me-2"></i>Full Commissioning</h6>
+                                <p class="small text-muted">From delivery to full operational handoff, including validation and documentation required for regulatory compliance.</p>
+                            </div>
+                        </div>
+                        <a href="{% url 'website:quotation' %}" class="btn btn-outline-primary rounded-pill mt-3 btn-fme-blue">
+                            Inquire About Equipment <i class="bi bi-arrow-right ms-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. DETAILED SERVICE SECTION 3: Consulting & Training -->
+        <section id="consulting-training" class="py-5 py-lg-6 bg-light border-bottom">
+            <div class="container-xl px-4">
+                <div class="row align-items-center g-5">
+                    <!-- Text Content -->
+                    <div class="col-lg-6 order-lg-1">
+                        <h2 class="display-6 fw-bold text-fme-dark mb-4">
+                            Strategic Consulting & Technical Training
+                        </h2>
+                        <p class="lead text-muted">
+                            Leverage our expertise to make informed decisions about your technology portfolio. We provide objective guidance on equipment acquisition, utilization, and staff proficiency.
+                        </p>
+                        <div class="d-flex align-items-start mb-4">
+                            <i class="bi bi-award-fill fs-3 text-fme-red flex-shrink-0 me-3"></i>
+                            <div>
+                                <h6 class="fw-bold text-fme-dark">Asset Management Consultation</h6>
+                                <p class="small text-muted mb-0">Guidance on budgeting, procurement planning, and optimizing the lifespan of your current assets to ensure cost-efficiency.</p>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-start">
+                            <i class="bi bi-mortarboard-fill fs-3 text-fme-red flex-shrink-0 me-3"></i>
+                            <div>
+                                <h6 class="fw-bold text-fme-dark">User & Specialist Training</h6>
+                                <p class="small text-muted mb-0">Tailored, hands-on training sessions for clinical and technical staff to maximize equipment safety and operational efficiency.</p>
+                            </div>
+                        </div>
+                        <a href="{% url 'website:quotation' %}" class="btn btn-outline-danger rounded-pill mt-4">
+                            Request a Consultation <i class="bi bi-arrow-right ms-2"></i>
+                        </a>
+                    </div>
+
+                    <!-- Image Placeholder -->
+                    <div class="col-lg-6 order-lg-2">
+                        <img src="{% static 'assets/img/consultation.png' %}{% comment %}https://placehold.co/1200x800/DC2626/ffffff?text=Consulting+and+Training{% endcomment %}"
+                             class="img-fluid img-rounded-3 shadow-lg"
+                             alt="A team receiving technical training in a conference room"
+                             onerror="this.onerror=null;this.src='https://placehold.co/1200x800/DC2626/ffffff?text=Consulting+and+Training';"
+                        >
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!--
+            ========================================================
+            6. DETAILED SERVICE SECTION 4: Research Design & Inventory Management (Fixed Content)
+            ========================================================
+        -->
+        <section id="research-inventory" class="py-5 py-lg-6 bg-light border-bottom">
+            <div class="container-xl px-4">
+                <div class="row align-items-center g-5">
+                    <!-- Image Placeholder (Order changed for visual variety) -->
+                    <div class="col-lg-6 order-lg-2 order-md-2">
+                        <img style="width: 100%; height: 420px;" src="{% static 'assets/img/training.png' %}"
+                             class="img-fluid img-rounded-3 shadow-lg service-img"
+                             alt="Digital inventory management system on a tablet"
+                             onerror="this.onerror=null;this.src='https://placehold.co/1200x800/808080/ffffff?text=Image+Loading+Failed';"
+                        >
+                    </div>
+
+                    <!-- Text Content -->
+                    <div class="col-lg-6 order-lg-1 order-md-1">
+                        <h2 class="display-6 fw-bold text-fme-dark mb-4">
+                            Research Design & Inventory Management
+                        </h2>
+                        <p class="lead text-muted">
+                            Beyond maintenance, we support innovation and efficiency. Our Research & Design team consults on medical research & new device projects, and our logistics experts streamline your consumable supply chain.
+                        </p>
+                        <div class="d-flex align-items-start mb-4">
+                            <i class="bi bi-journal-medical fs-3 text-fme-blue flex-shrink-0 me-3"></i>
+                            <div>
+                                <h6 class="fw-bold text-fme-dark">Medical Research design Support</h6>
+                                <p class="small text-muted mb-0">Technical consulting and design assistance for emerging medical device prototypes, focusing on manufacturability and compliance.</p>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-start">
+                            <i class="bi bi-box-fill fs-3 text-fme-blue flex-shrink-0 me-3"></i>
+                            <div>
+                                <h6 class="fw-bold text-fme-dark">Logistics & Inventory Auditing</h6>
+                                <p class="small text-muted mb-0">Optimizing spare parts stocking, supply chain efficiency, and conducting detailed audits of existing inventory.</p>
+                            </div>
+                        </div>
+                        <a href="{% url 'website:quotation' %}" class="btn btn-outline-primary rounded-pill mt-4 btn-fme-blue">
+                            Discuss a Project <i class="bi bi-arrow-right ms-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+{% endblock %}

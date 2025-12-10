@@ -1,0 +1,123 @@
+{% extends "layout.html" %}
+{% load static %}
+{% block content %}
+
+    <section class="py-5 py-lg-6 bg-light">
+        <div class="container-xl px-4">
+            <div class="row justify-content-center">
+                <!-- Heading and Contact Info Column -->
+                <div class="col-lg-5 mb-5 mb-lg-0">
+                    <span class="badge text-fme-red bg-light border border-fme-red mb-3 fw-bold py-2 px-3 rounded-pill text-uppercase">Request Pricing</span>
+                    <h1 class="display-6 fw-extrabold text-fme-dark mb-4">
+                        Submit Your Quotation Request
+                    </h1>
+                    <p class="lead text-muted mb-4">
+                        Tell us about your requirements, and our team will prepare a detailed, non-binding quote tailored to your facility's needs and equipment.
+                    </p>
+
+                    <!-- Direct Contact Details -->
+                    <div class="card p-4 shadow-sm border-0">
+                        <h5 class="fw-bold text-fme-blue mb-3">Or Contact Us Directly</h5>
+                        <p class="mb-2">
+                            <i class="bi bi-telephone-fill me-2 text-fme-blue"></i>
+                            <strong>Phone:</strong> +265 992 429 000
+                        </p>
+                        <p class="mb-2">
+                            <i class="bi bi-envelope-fill me-2 text-fme-blue"></i>
+                            <strong>Email:</strong> fme.fortressltd@outlook.com
+                        </p>
+                        <p class="mb-0">
+                            <i class="bi bi-geo-alt-fill me-2 text-fme-blue"></i>
+                            <strong>Office:</strong> Kapeni House - 2nd Floor, Blantyre, Malawi
+                        </p>
+                    </div>
+
+                    <div class="mt-4 p-3 bg-white shadow-sm small text-muted border-start border-5 border-fme-red">
+                        We aim to respond to all quotation requests within 2 business days. For urgent equipment failure, please call our emergency line.
+                    </div>
+                </div>
+
+                <!-- Quotation Form Column -->
+                <div class="col-lg-7">
+                    {% if submitted %}
+                    <div class="card p-5 shadow-lg border-0 text-center">
+                        <i class="bi bi-check-circle-fill display-1 text-success mb-4"></i>
+                        <h2 class="fw-bold text-fme-dark">Thank You, {{ success_name }}!</h2>
+                        <p class="lead text-muted">Your request has been sent successfully. We will get back to you shortly.</p>
+                        <a href="{% url 'website:home' %}" class="btn btn-fme-blue rounded-pill mt-3">Back to Home</a>
+                    </div>
+                    {% else %}
+                    <div class="card p-4 p-md-5 shadow-lg border-0">
+                        <form action="{% url 'website:get_quote' %}" method="POST" id="quotation-form">
+                            {% csrf_token %}
+                            <h3 class="fw-bold text-fme-dark mb-4">Service Details</h3>
+
+                            <!-- Contact Information Group -->
+                            <div class="row g-3 mb-4">
+                                <div class="col-md-6">
+                                    <label for="contactName" class="form-label fw-medium">Your Full Name <span class="text-fme-red">*</span></label>
+                                    <input type="text" name="contactName" class="form-control rounded-2" id="contactName" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="institution" class="form-label fw-medium">Institution/Hospital Name <span class="text-fme-red">*</span></label>
+                                    <input type="text" name="institution" class="form-control rounded-2" id="institution" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="email" class="form-label fw-medium">Email Address <span class="text-fme-red">*</span></label>
+                                    <input type="email" name="email" class="form-control rounded-2" id="email" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="phone" class="form-label fw-medium">Phone Number <span class="text-fme-red">*</span></label>
+                                    <input type="tel" name="phone" class="form-control rounded-2" id="phone" required>
+                                </div>
+                            </div>
+
+                            <!-- Service Request Group -->
+                            <h3 class="fw-bold text-fme-dark mb-4 mt-5">Request Details</h3>
+
+                            <div class="mb-4">
+                                <label for="serviceType" class="form-label fw-medium">Type of Service Needed <span class="text-fme-red">*</span></label>
+                                <select class="form-select rounded-2" name="serviceType" id="serviceType" required>
+                                    <option value="" disabled selected>Select an option</option>
+                                    <option value="Maintenance or Installation and commissioning">Maintenance or installation & commissioning</option>
+                                    <option value="Consultancy">Consultancy</option>
+                                    <option value="Research">Research Design</option>
+                                    <option value="Consumable">Medical Consumable supply</option>
+                                    <option value="Spare Parts">Spare parts supply</option>
+                                    <option value="Inventory">Inventory Management</option>
+                                    <option value="Training">Teams Training</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+
+                            <div class="mb-4">
+                                <label for="equipmentDetails" class="form-label fw-medium">Equipment Requiring Service/Supply <span class="text-muted">(Specify Manufacturer, Model, and Quantity)</span></label>
+                                <textarea class="form-control rounded-2" name="equipmentDetails" id="equipmentDetails" rows="3" placeholder="E.g., Philips IntelliVue MP50 (x3), Mindray WATO EX-65 Anesthesia Machine (x1)"></textarea>
+                            </div>
+
+                            <div class="mb-4">
+                                <label for="description" class="form-label fw-medium">Detailed Description of the Problem/Request</label>
+                                <textarea class="form-control rounded-2" name="description" id="description" rows="5" placeholder="If requesting a repair, please describe the fault. If requesting an AMC, indicate the size of your fleet."></textarea>
+                            </div>
+
+                            <div class="form-check mb-5">
+                                <input class="form-check-input" type="checkbox" value="" id="privacyPolicy" required>
+                                <label class="form-check-label small text-muted" for="privacyPolicy">
+                                    I agree to the terms and privacy policy.
+                                </label>
+                            </div>
+
+                            <button type="submit" class="btn btn-fme-red btn-lg rounded-pill w-100 fw-bold shadow-lg">
+                                Send Quotation Request
+                                <i class="bi bi-send-fill ms-2"></i>
+                            </button>
+                        </form>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+{% endblock %}

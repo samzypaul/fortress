@@ -1,0 +1,162 @@
+{% extends "layout.html" %}
+{% load static %}
+{% block title %}
+    FM Engineering
+{% endblock %}
+{% block content %}
+
+        <div class="py-5 py-md-5 py-lg-6 text-center bg-white border-bottom border-light-subtle">
+            <div class="container-xl px-4">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+                        <!-- Technical/Medical Icon Motif -->
+                        <svg class="hero-motif mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+
+                        <h1 class="display-4 fw-extrabold text-fme-dark">
+                            Precision Biomedical Engineering for <span class="text-fme-blue">Reliable Healthcare</span>
+                        </h1>
+                        <p class="mt-4 lead text-muted mx-auto" style="max-width: 700px;">
+                            We provide high-quality, professional medical engineering solutions, from installation and commissioning to medical supplies,research design, comprehensive preventative maintenance and specialized repairs.
+                        </p>
+                        <div class="mt-5 d-flex justify-content-center gap-3 flex-wrap">
+                            <a href="{% url 'website:services' %}" class="btn btn-fme-blue btn-lg rounded-pill shadow-sm">
+                                Explore Our Services
+                            </a>
+                            <a href="{% url 'website:quotation' %}" class="btn btn-outline-secondary btn-lg rounded-pill text-fme-dark border-fme-blue">
+                                Contact a Specialist
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--
+            ========================================================
+            3. ABOUT THE COMPANY (New Section)
+            ========================================================
+        -->
+        <section id="about" class="py-5 py-lg-6 bg-white border-bottom">
+            <div class="container-xl px-4">
+                <div class="row align-items-center g-5">
+
+                    <!-- Left Column: Image -->
+                    <div class="col-lg-6 order-lg-1">
+                        <img  style="height: 340px;width: 720px" src="{% static 'assets/img/servicing.png'%}"
+                             class="img-fluid img-rounded-3 shadow-lg"
+                             alt="Engineers working on complex medical equipment"
+                             onerror="this.onerror=null;this.src='https://placehold.co/1200x800/0077C2/ffffff?text=Medical+Equipment+Servicing';"
+                        >
+                    </div>
+
+                    <!-- Right Column: Text Content -->
+                    <div class="col-lg-6 order-lg-2">
+                        <span class="badge text-bg-danger text-uppercase fw-semibold mb-3">Established 2018</span>
+                        <h2 class="display-5 fw-bold text-fme-dark mb-4">
+                            Your Fortress of Medical Engineering Excellence
+                        </h2>
+                        <p class="lead text-muted">
+                            FORTRESS MEDICAL ENGINEERS PRIVATE LIMITED was founded in 2018 after identifying the crucial need for highly experienced and professional biomedical engineering services in Malawi and the wider region.
+                        </p>
+                        <p class="text-muted">
+                            Our team consists of qualified biomedical engineers with extensive expertise across the entire spectrum of hospital technology, including ICU, Theatre, Laboratory, and Radiology systems. We are committed to integrity, accountability, and delivering superior value for money to every client.
+                        </p>
+                        <!-- Read More Link - Currently anchors to the same page's About section for simplicity -->
+                        <a href="{% url 'website:about' %}" class="btn btn-outline-danger rounded-pill mt-3">
+                            Read More About Our Story
+                            <i class="bi bi-arrow-right ms-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--
+            ========================================================
+            4. SERVICES OVERVIEW (New Section)
+            ========================================================
+        -->
+        <section id="services" class="py-5 py-lg-6 bg-light">
+            <div class="container-xl px-4">
+                <div class="text-center mb-5">
+                    <span class="text-fme-blue fw-bold text-uppercase small">What We Do</span>
+                    <h2 class="display-6 fw-bold text-fme-dark mt-2">Comprehensive Biomedical Support</h2>
+                    <p class="lead text-muted mx-auto" style="max-width: 700px;">
+                        We ensure the smooth, safe, and efficient operation of your facility's most critical assets.
+                    </p>
+                </div>
+
+                <div class="row g-4">
+
+                    <!-- Service 1: Maintenance & Repair -->
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card p-4 h-100 shadow-sm border-top border-4 border-fme-blue">
+                            <i class="bi bi-gear-fill display-4 text-fme-blue mb-3"></i>
+                            <h5 class="fw-bold text-fme-dark">Maintenance & Calibration</h5>
+                            <p class="card-text text-muted small">
+                                Specialized preventative and corrective maintenance, precision calibrations, and essential electrical safety testing to minimize downtime.
+                            </p>
+                            <ul class="list-unstyled small mt-3 text-muted">
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Preventative & Corrective Maintenance</li>
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Medical Equipment Calibrations</li>
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Electrical Safety Tests</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Service 2: Supply & Installation -->
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card p-4 h-100 shadow-sm border-top border-4 border-fme-red">
+                            <i class="bi bi-box-seam-fill display-4 text-fme-red mb-3"></i>
+                            <h5 class="fw-bold text-fme-dark">Supply & Installation</h5>
+                            <p class="card-text text-muted small">
+                                Reliable sourcing and supply of certified medical equipment and spare parts, followed by professional installation and commissioning.
+                            </p>
+                            <ul class="list-unstyled small mt-3 text-muted">
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Medical Equipment Supply</li>
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Hospital Spare Parts supply</li>
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Installation and Commissioning</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Service 3: Consulting & Training -->
+                    <div class="col-md-6 col-lg-3 mx-auto">
+                        <div class="card p-4 h-100 shadow-sm border-top border-4 border-fme-blue">
+                            <i class="bi bi-lightbulb-fill display-4 text-fme-blue mb-3"></i>
+                            <h5 class="fw-bold text-fme-dark">Consulting & Training</h5>
+                            <p class="card-text text-muted small">
+                                Strategic consultation for equipment procurement and hands-on, specialized training for hospital staff and users.
+                            </p>
+                            <ul class="list-unstyled small mt-3 text-muted">
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Equipment Acquisition Planning</li>
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i>User & Hospital Staff Training</li>
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Systems Support & Audits</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Service 4: Research Design & Inventory Management (UPDATED) -->
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card p-4 h-100 shadow-sm border-top border-4 border-fme-red">
+                            <!-- Icon represents research/data -->
+                            <i class="bi bi-clipboard-data-fill display-4 text-fme-red mb-3"></i>
+                            <h5 class="fw-bold text-fme-dark">Research Design & Inventory</h5>
+                            <p class="card-text text-muted small">
+                                Technical expertise in medical device research and development, coupled with efficient inventory management and logistics planning.
+                            </p>
+                            <ul class="list-unstyled small mt-3 text-muted">
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Research Design Support</li>
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Inventory Management</li>
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Logistics & Supply Chain Planning</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+{% endblock %}
