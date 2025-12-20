@@ -11,21 +11,33 @@ https://docs.djangoproject.com/en/6.0/ref/settings/
 """
 
 from pathlib import Path
-
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
+import environ   
+# env = environ.Env(
+#     DEBUG =(bool, False),
+#     ALLOWED_HOSTS = (list,[])
+# )
+# # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+# environ.Env.read_env(BASE_DIR/ ".env")
+# Initialize environment variables
+env = environ.Env(
+    DEBUG=(bool, False),
+    ALLOWED_HOSTS=(list, []),
+)
 
+# Read from .env file
+environ.Env.read_env(BASE_DIR / ".env")
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/6.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-o+k@ssur6)cq@w0^45oeze&bdp0m@7l$fhk5sw9ysf%2+5^g&6'
+SECRET_KEY = 'django-insecure-o+k@ssur6)cq@w0^45oeze&bdp0m@7l$fhk5sw9ysf%2+5^g&6'#env("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = env("DEBUG")#True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = env("ALLOWED_HOSTS")  #[]
 
 
 # Application definition
@@ -138,7 +150,7 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'samzypaul@gmail.com'
-EMAIL_HOST_PASSWORD = 'fwld grsc tmjv ghuk'  # The 16-digit App Password
-DEFAULT_FROM_EMAIL = 'fme.fortressltd@gmail.com'
+EMAIL_HOST_USER = env("EMAIL_HOST_USER")
+EMAIL_HOST_PASSWORD = env("EMAIL_HOST_PASSWORD")  # The 16-digit App Password
+DEFAULT_FROM_EMAIL = env("DEFAULT_FROM_EMAIL")
 
