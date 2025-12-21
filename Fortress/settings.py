@@ -20,10 +20,12 @@ import environ
 BASE_DIR = Path(__file__).resolve().parent.parent
 # environ.Env.read_env(BASE_DIR/ ".env")
 # Initialize environment variables
-env = environ.Env(
-    DEBUG=(bool, False),
-    ALLOWED_HOSTS=(list, []),
-)
+# env = environ.Env(
+#     DEBUG=(bool, False),
+#     ALLOWED_HOSTS=(list, []),
+# )
+DEBUG = False
+ALLOWED_HOST = (list, [])
 
 # Read from .env file
 environ.Env.read_env(BASE_DIR / ".env")
@@ -35,9 +37,9 @@ environ.Env.read_env(BASE_DIR / ".env")
 SECRET_KEY = 'django-insecure-o+k@ssur6)cq@w0^45oeze&bdp0m@7l$fhk5sw9ysf%2+5^g&6'#env("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = env("DEBUG")#True
+# DEBUG = env("DEBUG")#True
 
-ALLOWED_HOSTS = env("ALLOWED_HOSTS")  #[]
+# ALLOWED_HOSTS = env("ALLOWED_HOSTS")  #[]
 
 
 # Application definition
@@ -150,7 +152,7 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = env("EMAIL_HOST_USER")
-EMAIL_HOST_PASSWORD = env("EMAIL_HOST_PASSWORD")  # The 16-digit App Password
-DEFAULT_FROM_EMAIL = env("DEFAULT_FROM_EMAIL")
+EMAIL_HOST_USER = 'samzypaul@gmail.com'
+EMAIL_HOST_PASSWORD = 'fwld grsc tmjv ghuk'#env("EMAIL_HOST_PASSWORD")  # The 16-digit App Password
+DEFAULT_FROM_EMAIL = 'fme.fortressltd@gmail.com'#env("DEFAULT_FROM_EMAIL")
 
