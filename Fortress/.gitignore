@@ -1,0 +1,23 @@
+# Ignore Python cache
+__pycache__/
+*.pyc
+
+# Ignore environment files
+.env
+
+# Ignore node_modules in JS projects
+node_modules/
+
+# Ignore build outputs
+dist/
+build/
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
+
+# Ignore IDE-specific files
+.vscode/
+.idea/
+.venv/
+.envrc
