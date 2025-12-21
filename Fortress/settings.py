@@ -25,9 +25,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 #     ALLOWED_HOSTS=(list, []),
 # )
 DEBUG = False
-ALLOWED_HOST = (list, ['lm-medicalengineering.com',
-'fortress.lm-medicalengineering.com','72.61.242.140'
-])
+
+
+ALLOWED_HOSTS = [
+    'lm-medicalengineering.com',
+    'fortress.lm-medicalengineering.com',
+    '72.61.242.140',
+]
 
 # Read from .env file
 environ.Env.read_env(BASE_DIR / ".env")
