@@ -29,6 +29,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     'lm-medicalengineering.com',
+    'www.lm-medicalengineering.com',
     'fortress.lm-medicalengineering.com',
     '72.61.242.140',
     'localhost',
