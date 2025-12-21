@@ -24,13 +24,15 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 #     DEBUG=(bool, False),
 #     ALLOWED_HOSTS=(list, []),
 # )
-DEBUG = False
+DEBUG = True
 
 
 ALLOWED_HOSTS = [
     'lm-medicalengineering.com',
     'fortress.lm-medicalengineering.com',
     '72.61.242.140',
+    'localhost',
+    '127.0.0.1',
 ]
 
 # Read from .env file
