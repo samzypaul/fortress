@@ -24,7 +24,12 @@ environ.Env.read_env(os.path.join(BASE_DIR, ".env"))
 #SECRET_KEY = env("SECRET_KEY")
 SECRET_KEY = "django-insecure-o+k@ssur6)cq@w0^45oeze&bdp0m@7l$fhk5sw9ysf%2+5^g&6"
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = env.bool("DEBUG", default=True)
+DEBUG = False
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://fortressmw.shop",
+    "https://www.fortressmw.shop",
+]
 
 ALLOWED_HOSTS = env.list("ALLOWED_HOSTS", default=[
     'fortressmw.shop',
@@ -32,6 +37,7 @@ ALLOWED_HOSTS = env.list("ALLOWED_HOSTS", default=[
     '72.61.242.140',
     'localhost',
     '127.0.0.1',
+    '72.62.30.34',
 ])
 
 # Application definition
